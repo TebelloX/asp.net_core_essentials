@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ContosoCraftsWebsite
+namespace ContosoCraftsWebSite
 {
     public class Startup
     {

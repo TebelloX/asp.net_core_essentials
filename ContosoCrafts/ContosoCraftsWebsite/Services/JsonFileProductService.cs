@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ContosoCraftsWebsite.Services
 {
-    public class JsonFileProductsService
+    public class JsonFileProductService
     {
     }
 }

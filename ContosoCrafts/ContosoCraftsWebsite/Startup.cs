@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ContosoCraftsWebsite.Services;
 
 namespace ContosoCraftsWebSite
 {
@@ -24,6 +25,8 @@ namespace ContosoCraftsWebSite
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddTransient<JsonFileProductService>()
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

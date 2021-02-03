@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ContosoCraftsWebSite.Models;
 using ContosoCraftsWebsite.Services;
 
 namespace ContosoCraftsWebsite.Pages
@@ -13,6 +14,7 @@ namespace ContosoCraftsWebsite.Pages
     {
         private readonly ILogger<IndexModel> _logger;
         public JsonFileProductService ProductService;
+        public IEnumerable<Product> 
         public IndexModel(ILogger<IndexModel> logger,
             JsonFileProductService productService)
         {

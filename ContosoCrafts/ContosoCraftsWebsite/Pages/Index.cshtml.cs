@@ -14,7 +14,7 @@ namespace ContosoCraftsWebsite.Pages
     {
         private readonly ILogger<IndexModel> _logger;
         public JsonFileProductService ProductService;
-        public IEnumerable<Product> 
+        public IEnumerable<Product> Products { }
         public IndexModel(ILogger<IndexModel> logger,
             JsonFileProductService productService)
         {

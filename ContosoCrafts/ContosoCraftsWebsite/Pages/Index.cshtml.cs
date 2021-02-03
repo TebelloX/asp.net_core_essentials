@@ -19,6 +19,7 @@ namespace ContosoCraftsWebsite.Pages
             JsonFileProductService productService)
         {
             _logger = logger;
+            ProductService = productService;
         }
 
         public void OnGet()

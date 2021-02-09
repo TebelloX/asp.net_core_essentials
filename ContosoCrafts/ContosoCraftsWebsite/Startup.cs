@@ -28,6 +28,7 @@ namespace ContosoCraftsWebSite
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddControllers();
             services.AddTransient<JsonFileProductService>();
 
         }

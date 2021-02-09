@@ -7,7 +7,9 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
+using ContosoCraftsWebSite.Models;
 using ContosoCraftsWebsite.Services;
 
 namespace ContosoCraftsWebSite
@@ -55,7 +57,8 @@ namespace ContosoCraftsWebSite
                 endpoints.MapRazorPages();
                 endpoints.MapGet("/products", (context) =>
                 {
-                    var products = app.ApplicationServices.GetService<JsonFileProductService>();
+                    var products = app.ApplicationServices.GetService<JsonFileProductService>().GetProducts();
+                    var json = JsonSerializer.Serialize<IEnumerable<Product>>(products);
                 });
             });                           
         }

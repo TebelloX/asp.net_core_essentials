@@ -53,7 +53,11 @@ namespace ContosoCraftsWebSite
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
-            });
+                endpoints.MapGet("/products", (context) =>
+                {
+
+                });
+            });                           
         }
     }
 }

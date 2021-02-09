@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ContosoCraftsWebSite.Models;
 using ContosoCraftsWebsite.Services;
 
 namespace ContosoCraftsWebsite.Controllers
@@ -18,5 +19,10 @@ namespace ContosoCraftsWebsite.Controllers
         }
 
         public JsonFileProductService ProductService { get;  }
+
+        public IEnumerable<Product> Get()
+        {
+            return ProductService.GetProducts();
+        }
     }
 }

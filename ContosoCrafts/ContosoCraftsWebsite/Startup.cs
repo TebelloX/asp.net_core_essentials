@@ -55,7 +55,7 @@ namespace ContosoCraftsWebSite
                 endpoints.MapRazorPages();
                 endpoints.MapGet("/products", (context) =>
                 {
-
+                    var products = app.ApplicationServices.GetService<JsonFileProductService>();
                 });
             });                           
         }

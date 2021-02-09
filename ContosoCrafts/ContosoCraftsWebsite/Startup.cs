@@ -11,6 +11,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using ContosoCraftsWebSite.Models;
 using ContosoCraftsWebsite.Services;
+using Microsoft.AspNetCore.Http;
 
 namespace ContosoCraftsWebSite
 {
@@ -59,6 +60,7 @@ namespace ContosoCraftsWebSite
                 {
                     var products = app.ApplicationServices.GetService<JsonFileProductService>().GetProducts();
                     var json = JsonSerializer.Serialize<IEnumerable<Product>>(products);
+                    return context.Response.WriteAsync(json);
                 });
             });                           
         }
